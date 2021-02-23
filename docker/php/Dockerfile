@@ -19,4 +19,4 @@ unzip \
 WORKDIR /var/www/html
 
 #コンテナ内に入った時のディレクトリを指定
-WORKDIR /var/www/html
+WORKDIR /var/www/html/laravel
