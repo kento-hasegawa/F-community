@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-dark green">
 
-    <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>Father's community</a>
+    <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>F-community</a>
 
     <ul class="navbar-nav ml-auto">
 
