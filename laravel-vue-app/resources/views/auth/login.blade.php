@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'ユーザー登録')
+@section('title', 'ログイン')
 
 @section('content')
 <div class="container">
@@ -9,34 +9,31 @@
             <h1 class="text-center"><a class="text-dark" href="/">F-community</a></h1>
             <div class="card mt-3">
                 <div class="card-body text-center">
-                    <h2 class="h3 card-title text-center mt-2">ユーザー登録</h2>
+                    <h2 class="h3 card-title text-center mt-2">ログイン</h2>
 
                     @include('error_card_list')
 
                     <div class="card-text">
-                        <form method="POST" action="{{route('register')}}">
+                        <form method="POST" action="{{ route('login') }}">
                             @csrf
-                            <div class="md-form">
-                                <label for="name">ユーザー名</label>
-                                <input class="form-control" type="text" id="name" name="name" required value="{{ old('name') }}">
-                                <small>英数字3〜16文字(登録後の変更はできません)</small>
-                            </div>
+
                             <div class="md-form">
                                 <label for="email">メールアドレス</label>
                                 <input class="form-control" type="text" id="email" name="email" required value="{{ old('email') }}">
                             </div>
+
                             <div class="md-form">
                                 <label for="password">パスワード</label>
                                 <input class="form-control" type="password" id="password" name="password" required>
                             </div>
-                            <div class="md-form">
-                                <label for="password_confirmation">パスワード(確認)</label>
-                                <input class="form-control" type="password" id="password_confirmation" name="password_confirmation" required>
-                            </div>
-                            <button class="btn btn-block green mt-2 mb-2" type="submit">ユーザー登録</button>
+
+                            <input type="hidden" name="remember" id="remember" value="on">
+                            <button class="btn btn-block green mt-2 mb-2" type="submit">ログイン</button>
+
                         </form>
+
                         <div class="mt-0">
-                            <a href="{{ route('login') }}" class="card-text">ログインはこちら</a>
+                            <a href="{{ route('register') }}" class="card-text">ユーザー登録はこちら</a>
                         </div>
 
                     </div>
