@@ -1,6 +1,12 @@
 <nav class="navbar navbar-expand navbar-dark green">
 
+    @guest
     <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>F-community</a>
+    @endguest
+
+    @auth
+    <a class="navbar-brand" href="/index"><i class="far fa-sticky-note mr-1"></i>F-community</a>
+    @endauth
 
     <ul class="navbar-nav ml-auto">
         @guest
