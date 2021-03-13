@@ -8,6 +8,8 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\Auth;
+
 
 class LoginController extends Controller
 {
@@ -61,6 +63,18 @@ class LoginController extends Controller
             'provider' => $provider,
             'email' => $providerUser->getEmail(),
             'token' => $providerUser->token,
-        ]);  
+        ]);
+    }
+
+    private const GUEST_USER_ID = 6;
+
+    public function guestLogin()
+    {
+        // id=1 のゲストユーザー情報がDBに存在すれば、ゲストログインする
+        if (Auth::loginUsingId(self::GUEST_USER_ID)) {
+            return redirect('/index');
+        }
+
+        return redirect('/index');
     }
 }
