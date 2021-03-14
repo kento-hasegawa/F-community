@@ -1,27 +1,27 @@
 <nav class="navbar navbar-expand navbar-dark green">
 
     @guest
-    <a class="navbar-brand" href="/"><i class="fas fa-hippo"></i>F-community</a>
+    <a class="navbar-brand" href="/"><i class="fas fa-hippo mr-1"></i>F-community</a>
     @endguest
 
     @auth
-    <a class="navbar-brand" href="/index"><i class="fas fa-hippo">F-community</a>
+    <a class="navbar-brand" href="/index"><i class="fas fa-hippo mr-1"></i>F-community</a>
     @endauth
 
     <ul class="navbar-nav ml-auto">
-        @guest
 
-        <li class="nav-item">
+        @guest
+        <li class="nav-item mt-2">
             <a class="nav-link" href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i>ユーザー登録</a>
         </li>
         @endguest
 
         @guest
-        <li class="nav-item">
+        <li class="nav-item mt-2">
             <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt" aria-hidden="true"></i>ログイン</a>
         </li>
 
-        <button class="btn btn-danger">
+        <button class="btn btn-danger pb-1">
             <a href="{{ route('login.guest') }}" class="text-white"><font size="2">ゲストログイン
             </font>
             </a>
@@ -57,5 +57,6 @@
         @endauth
 
     </ul>
+
 
 </nav>
