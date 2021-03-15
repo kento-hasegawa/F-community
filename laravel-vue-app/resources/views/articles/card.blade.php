@@ -12,7 +12,7 @@
 
 
             <div class="font-weight-lighter">{{ $article->created_at->format('Y/m/d H:i') }}
-                
+
             </div>
         </div>
 
