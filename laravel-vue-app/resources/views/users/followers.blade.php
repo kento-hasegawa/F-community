@@ -11,4 +11,5 @@
     @include('users.person')
     @endforeach
 </div>
+@include('footer')
 @endsection

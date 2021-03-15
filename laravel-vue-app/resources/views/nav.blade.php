@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-dark green">
+<nav class="navbar navbar-expand navbar-dark green accent-4">
 
     @guest
     <a class="navbar-brand" href="/"><i class="fas fa-hippo mr-1"></i>F-community</a>
@@ -22,7 +22,7 @@
         </li>
 
         <button class="btn btn-danger pb-1">
-            <a href="{{ route('login.guest') }}" class="text-white"><font size="2">ゲストログイン
+            <a href="{{ route('login.guest') }}" class="text-white"><font size="2"><i class="fas fa-sign-in-alt" aria-hidden="true"></i> ゲストログイン
             </font>
             </a>
         </button>

@@ -25,7 +25,7 @@
                                 <label for="email">メールアドレス</label>
                                 <input class="form-control" type="text" id="email" name="email" value="{{ $email }}" disabled>
                             </div>
-                            <button class="btn btn-block green mt-2 mb-2" type="submit">ユーザー登録</button>
+                            <button class="btn btn-block green accent-3 mt-2 mb-2" type="submit">ユーザー登録</button>
                         </form>
                     </div>
                 </div>
