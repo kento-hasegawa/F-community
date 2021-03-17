@@ -4,6 +4,9 @@
             <a href="{{ route('users.show', ['name' => $user->name]) }}" class="text-dark">
                 <i class="fas fa-user-circle fa-3x"></i>
             </a>
+            <p>
+                {{ $user->introduction }}
+            </p>
             @if( Auth::id() !== $user->id )
             <follow-button class="ml-auto"
             :initial-is-followed-by='@json($user->isFollowedBy(Auth::user()))'
@@ -26,5 +29,10 @@
                 {{ $user->count_followers }} フォロワー
             </a>
         </div>
+
+            <a href="{{ route('users.edit', ['name' => $user->name]) }}" class="text-muted ml-auto">
+                プロフィール編集
+            </a>
+        
     </div>
 </div>
